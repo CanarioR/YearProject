@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Tiempo Juntos 💖</title>
+    
+    <!-- Fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Contenedor de corazones flotantes -->
+    <div id="hearts-container"></div>
+
+    <!-- Reproductor de música de fondo -->
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="media/NADIE MÁS_ - Nsqk.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <!-- Control de música flotante -->
+    <div class="music-control" id="musicControl">
+        <button class="music-btn" id="musicToggle" title="Reproducir/Pausar música">
+            <span class="music-icon">🎵</span>
+        </button>
+        <div class="volume-control hidden" id="volumeControl">
+            <input type="range" id="volumeSlider" min="0" max="100" value="30" class="volume-slider">
+            <span class="volume-label" id="volumeLabel">30%</span>
+        </div>
+    </div>
+
+    <!-- Overlay de carga con transición -->
+    <div class="page-loader">
+        <div class="loader-heart">💖</div>
+    </div>
+
+    <!-- Contenido principal -->
+    <main class="container">
+        
+        <!-- SECCIÓN 1: Encabezado con contador -->
+        <section class="hero-section fade-in">
+            <h1 class="main-title">Nuestro Tiempo Juntos 💖</h1>
+            <p class="subtitle">Cada momento contigo es especial</p>
+            
+            <!-- Contador en tiempo real -->
+            <div class="counter-container">
+                <div class="counter-item">
+                    <span class="counter-number" id="days">0</span>
+                    <span class="counter-label">Días</span>
+                </div>
+                <div class="counter-item">
+                    <span class="counter-number" id="hours">0</span>
+                    <span class="counter-label">Horas</span>
+                </div>
+                <div class="counter-item">
+                    <span class="counter-number" id="minutes">0</span>
+                    <span class="counter-label">Minutos</span>
+                </div>
+                <div class="counter-item">
+                    <span class="counter-number" id="seconds">0</span>
+                    <span class="counter-label">Segundos</span>
+                </div>
+            </div>
+            
+            <p class="start-date">Desde el 27 de Noviembre del 2025</p>
+        </section>
+
+        <!-- SECCIÓN NUEVA: Contador de visitas -->
+        <section class="visits-section fade-in">
+            <div class="visits-container">
+                <p class="visits-text">He pensado en ti</p>
+                <p class="visits-number" id="visitCount">0</p>
+                <p class="visits-label">veces 💭</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: Carrusel de fotos y videos -->
+        <section class="gallery-section fade-in">
+            <h2 class="section-title">Nuestros Momentos 💕</h2>
+            
+            <!-- Carrusel -->
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Los items se cargan dinámicamente desde JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Controles del carrusel -->
+                <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Anterior">
+                    <span>❮</span>
+                </button>
+                <button class="carousel-btn next-btn" id="nextBtn" aria-label="Siguiente">
+                    <span>❯</span>
+                </button>
+                
+                <!-- Indicadores -->
+                <div class="carousel-indicators" id="carouselIndicators"></div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: Carta romántica con efecto máquina de escribir -->
+        <section class="letter-section fade-in">
+            <h2 class="section-title">Para Ti, Mi Amor</h2>
+            <div class="letter-container" id="letterContainer">
+                <div class="letter-envelope" id="letterEnvelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body">
+                        <p class="envelope-text">Haz clic para abrir 💌</p>
+                    </div>
+                </div>
+                <div class="letter-content hidden" id="letterContent">
+                    <p id="typewriter-text"></p>
+                    <p class="letter-signature">Con todo mi amor 💕</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN NUEVA: Rompecabezas -->
+        <section class="puzzle-section fade-in">
+            <h2 class="section-title">Arma Nuestro Recuerdo 🧩</h2>
+            <p class="puzzle-instructions">Arrastra las piezas para armar el rompecabezas 💕</p>
+            <div class="puzzle-container">
+                <div class="puzzle-board" id="puzzleBoard"></div>
+                <button class="puzzle-reset-btn" id="puzzleResetBtn">Reiniciar Puzzle 🔄</button>
+                <div class="puzzle-message hidden" id="puzzleMessage">
+                    <p>¡Lo lograste! 🎉</p>
+                    <p class="puzzle-love-text">Juntos, todo encaja 💖</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: Detalle interactivo final -->
+        <section class="interactive-section fade-in">
+            <div class="love-button-container">
+                <button class="love-button" id="loveButton">
+                    <span class="button-text">Haz clic aquí 💖</span>
+                </button>
+                <p class="love-message" id="loveMessage"></p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Hecho con amor para ti • Diego Armando Sánchez Rubio AKA Canario <3</p>
+        </footer>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
