@@ -7,23 +7,20 @@
 const RELATIONSHIP_START_DATE = "2024-11-27";
 
 // Texto de la carta romántica para el efecto de máquina de escribir
-const LOVE_LETTER = `Desde el día que llegaste a mi vida, todo cambió. Cada momento a tu lado es un regalo que atesoro en mi corazón. Tu sonrisa ilumina mis días más oscuros y tu amor me hace la persona más afortunada del mundo. Gracias por cada risa compartida, cada abrazo sincero y cada segundo juntos. Eres mi compañera, mi confidente, mi amor verdadero. Te amo más de lo que las palabras pueden expresar, y prometo amarte cada día más que el anterior. Feliz aniversario, mi amor. 💕`;
+const LOVE_LETTER = `Desde hace un año (o más) que me encuentro totalmente enamorado de ti, no hay defecto alguno que encuentre en todo tú ser, durante este año juntos me he dado cuenta que eres todo lo que siempre había querido hecho realidad y no hay nada más que le pueda pedir a la vida si te tengo junto a mí, te amo infinitamente y te escogería en todas las vidas, quédate conmigo siempre, niña preciosa. 💕`;
 
 // Mensajes para el botón interactivo
 const LOVE_MESSAGES = [
-    "¡Te amo con todo mi corazón! 💖",
-    "Eres lo mejor que me ha pasado 💕",
-    "Contigo, todo es mejor 🌟",
-    "Mi amor por ti es infinito 💝",
-    "Eres mi persona favorita 💗",
-    "No hay nadie como tú 💓",
-    "Cada día te amo más 💞",
-    "Eres mi sueño hecho realidad ✨"
+    "Es que eres tú, no quiero a nadie más 💙",
+    "It's you, I don't want anyone else 💙",
+    "C'est toi, je ne veux personne d'autre 💙",
+    "Es bist du, ich will niemand anderen 💙",
+    "Это потому что это ты, я не хочу никого другого 💙",
+    "É que é você, não quero mais ninguém 💙",
+    "당신이니까요, 다른 사람은 원하지 않아요 💙",
+    "Sen olduğun için, başka kimseyi istemiyorum 💙"
 ];
-
-// CONFIGURACIÓN SIMPLIFICADA DE FOTOS Y VIDEOS
-// Solo escribe los NOMBRES de tus archivos (con extensión) que están en la carpeta media/
-// El código detectará automáticamente si es foto o video por la extensión
+// Archivos multimedia disponibles (fotos y videos)
 const MEDIA_FILES = [
 '04E7C4AA-D6A9-4B7C-BC9A-A6FF21478DA3.jpg',
     '0A29C997-F9F1-4D23-9D09-B61045372C98.jpg',
