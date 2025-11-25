@@ -534,7 +534,7 @@ function initCarousel() {
                 if (video.paused) {
                     video.play();
                     video.setAttribute('data-playing', 'true');
-                    video.muted = false; // Activar sonido al reproducir
+                    // Mantener muted para que no interfiera con la música de fondo
                     stopAutoplay();
                 } else {
                     video.pause();

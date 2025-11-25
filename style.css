@@ -755,7 +755,7 @@ body {
 .puzzle-love-text {
     font-family: 'Dancing Script', cursive;
     font-size: clamp(1.5rem, 5vw, 2.2rem);
-    color: var(--primary-pink);
+    color: var(--white);
     line-height: 1.6;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
