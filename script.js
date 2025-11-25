@@ -184,7 +184,7 @@ function updateVisitCount() {
     
     if (!visitCount) {
         // Iniciar en 212221 si es la primera visita
-        visitCount = 212220;
+        visitCount = 212219;
     }
     
     // Incrementar el contador
@@ -917,3 +917,4 @@ console.log(`📊 Total de archivos media: ${MEDIA_FILES.length}`);
 console.log(`📷 Fotos: ${MEDIA_ITEMS.filter(item => item.type === 'image').length}`);
 console.log(`🎥 Videos: ${MEDIA_ITEMS.filter(item => item.type === 'video').length}`);
 console.log('💡 Tip: Si los videos .mov no se ven, intenta convertirlos a .mp4 usando un conversor online');
+
